@@ -1,0 +1,50 @@
+{
+  "name": "beni-js",
+  "version": "1.0.5",
+  "description": "a lightweight, performant JavaScript library designed for developers who want to build modern single-page applications without the complexity of heavyweight frameworks.",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "unpkg": "dist/index.umd.js",
+  "source": "src/core/index.js",
+  "bin": {
+    "beni": "./bin/beni.js"
+  },
+  "files": [
+    "dist",
+    "bin",
+    "lib",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "microbundle --entry src/core/index.js --name Beni --target web --format modern,cjs,umd",
+    "dev": "node bin/beni.js dev",
+    "test": "node bin/beni.js create test-project",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "spa",
+    "framework",
+    "cli",
+    "router",
+    "state-management",
+    "vanilla-js"
+  ],
+  "author": "Vinícius Barreto <vinicius.barreto@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vbfs/beni-js.git"
+  },
+  "dependencies": {
+    "chokidar": "^3.5.3",
+    "ws": "^8.13.0",
+    "mime-types": "^2.1.35"
+  },
+  "devDependencies": {
+    "microbundle": "^0.15.1"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}
