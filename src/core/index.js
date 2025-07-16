@@ -233,7 +233,7 @@ class Beni {
     constructor(options = {}) {
         this.options = {
             container: '#app',
-            hashRouting: true,
+            hashRouting: false,
             ...options
         };
 
