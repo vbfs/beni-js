@@ -28,7 +28,10 @@
     "cli",
     "router",
     "state-management",
-    "vanilla-js"
+    "vanilla-js",
+    "minification",
+    "optimization",
+    "performance"
   ],
   "author": "Vinícius Barreto <vinicius.barreto@gmail.com>",
   "license": "MIT",
@@ -43,6 +46,32 @@
   },
   "devDependencies": {
     "microbundle": "^0.15.1"
+  },
+  "optionalDependencies": {
+    "terser": "^5.31.0",
+    "html-minifier-terser": "^7.2.0",
+    "postcss": "^8.4.32",
+    "cssnano": "^6.0.1"
+  },
+  "peerDependencies": {
+    "terser": ">=5.0.0",
+    "html-minifier-terser": ">=7.0.0",
+    "postcss": ">=8.0.0",
+    "cssnano": ">=6.0.0"
+  },
+  "peerDependenciesMeta": {
+    "terser": {
+      "optional": true
+    },
+    "html-minifier-terser": {
+      "optional": true
+    },
+    "postcss": {
+      "optional": true
+    },
+    "cssnano": {
+      "optional": true
+    }
   },
   "engines": {
     "node": ">=14.0.0"
